@@ -20,6 +20,16 @@ namespace Linq
                  
             }
         }
+        public List<ProductReview> RetrieveUnderCondition(List<ProductReview> productReview)
+        {
+            var condition = (from product in productReview
+                          where product.Rating > 3 && (product.ProductId == 1 || product.ProductId == 4 || product.ProductId == 9)
+                          select product).ToList();
 
-    } }
+            return condition;
+        
+        }
+
+    } 
+}
 

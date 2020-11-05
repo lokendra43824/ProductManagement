@@ -17,14 +17,23 @@ namespace Linq
                 new ProductReview(){ProductId = 1, UserId = 1, Rating = 5, Review = "excellent", isLike = true },
                  new ProductReview(){ProductId = 2, UserId = 2, Rating = 4, Review = "good", isLike = true },
                  new ProductReview(){ProductId = 3, UserId = 3, Rating = 3, Review = "average", isLike = true },
-                 new ProductReview(){ProductId = 4, UserId = 4, Rating = 2, Review = "low", isLike = true },
+                 new ProductReview(){ProductId = 4, UserId = 4, Rating = 4, Review = "low", isLike = true },
                  new ProductReview(){ProductId = 5, UserId = 5, Rating = 1, Review = "flop", isLike = true },
             };
-            //foreach (var list in productReviewList)
-             //{
-             //Console.WriteLine("ProductId:" + list.ProductId + " " + "userId: " + list.UserId);
-            //}
+            
             Management management = new Management();
-            management.TopThreeRecords(productReviewList);
+           
+            management.RetrieveUnderCondition(productReviewList);
+            List<ProductReview> RatingGreaterThanThree = management.RetrieveUnderCondition(productReviewList);
+            displayList(RatingGreaterThanThree);
+
+          static void displayList(List<ProductReview> list)
+            {
+                foreach (var item in list)
+                {
+                    Console.WriteLine("productID : " + "  " + item.ProductId + " user Id: " + "  " + item.UserId + " Rating: " + "  " + item.Rating + " Review: " + "  " + item.Review + " IsLike: " + "  " + item.isLike);
+                }
+            }
         }
-    } }
+    }
+}
