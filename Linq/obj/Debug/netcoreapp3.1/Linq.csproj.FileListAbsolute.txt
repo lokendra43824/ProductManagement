@@ -1,0 +1,13 @@
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.exe
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.deps.json
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.runtimeconfig.json
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.runtimeconfig.dev.json
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.dll
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\bin\Debug\netcoreapp3.1\Linq.pdb
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.csprojAssemblyReference.cache
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.AssemblyInfoInputs.cache
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.AssemblyInfo.cs
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.csproj.CoreCompileInputs.cache
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.dll
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.pdb
+C:\Users\NAGENDRA AND JANAKI\source\repos\Linq\Linq\obj\Debug\netcoreapp3.1\Linq.genruntimeconfig.cache
