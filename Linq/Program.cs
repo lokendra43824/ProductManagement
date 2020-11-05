@@ -20,11 +20,11 @@ namespace Linq
                  new ProductReview(){ProductId = 4, UserId = 4, Rating = 2, Review = "low", isLike = true },
                  new ProductReview(){ProductId = 5, UserId = 5, Rating = 1, Review = "flop", isLike = true },
             };
-            //foreach (var list in productReviewList)
-            // {
-            // Console.WriteLine("ProductId:" + list.ProductId + " " + "userId: " + list.UserId);
-            //}
-            Management management = new Management();
-            management.TopThreeRecords(productReviewList);
+            foreach (var list in productReviewList)
+             {
+             Console.WriteLine("ProductId:" + list.ProductId + " " + "userId: " + list.UserId);
+            }
+           // Management management = new Management();
+            //management.TopThreeRecords(productReviewList);
         }
     } }
