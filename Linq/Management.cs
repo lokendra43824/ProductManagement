@@ -29,6 +29,18 @@ namespace Linq
             return condition;
         
         }
+        public void GetCountGroupProductId(List<ProductReview> productReview)
+        {
+
+
+            var result = productReview.GroupBy(x => x.ProductId)
+                         .Select(x => new { productId = x.Key, count = x.Count() });
+            Console.WriteLine("productId" + "\t " + "NoOfReviews");
+            foreach (var x in result)
+            {
+                Console.WriteLine("   " + x.productId + "\t\t    " + x.count);
+            }
+        }
 
     } 
 }

@@ -22,10 +22,9 @@ namespace Linq
             };
             
             Management management = new Management();
+            management.GetCountGroupProductId(productReviewList);
+
            
-            management.RetrieveUnderCondition(productReviewList);
-            List<ProductReview> RatingGreaterThanThree = management.RetrieveUnderCondition(productReviewList);
-            displayList(RatingGreaterThanThree);
 
           static void displayList(List<ProductReview> list)
             {
