@@ -54,6 +54,12 @@ namespace Linq
             }
 
         }
+        public List<ProductReview> skipTopFiveRecords(List<ProductReview> product_Review)
+        {
+            var result = (from product in product_Review
+                          select product).Skip(5);
+            return result.ToList();
+        }
 
 
 
