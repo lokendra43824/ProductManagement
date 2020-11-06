@@ -22,17 +22,11 @@ namespace Linq
             };
             
             Management management = new Management();
-            management.GetCountGroupProductId(productReviewList);
+            management.RetrieveproductIdAndReview(productReviewList);
 
            
 
-          static void displayList(List<ProductReview> list)
-            {
-                foreach (var item in list)
-                {
-                    Console.WriteLine("productID : " + "  " + item.ProductId + " user Id: " + "  " + item.UserId + " Rating: " + "  " + item.Rating + " Review: " + "  " + item.Review + " IsLike: " + "  " + item.isLike);
-                }
-            }
+         
         }
     }
 }

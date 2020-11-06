@@ -8,28 +8,29 @@ namespace Linq
 {
     public class Management
     {
-        public readonly DataTable data = new DataTable();
-        public void TopThreeRecords(List<ProductReview> listProductReview)
+
+        public List<ProductReview> GetTopThreeRatedProducts(List<ProductReview> productReview)
         {
-            var recordedData = (from productReviews in listProductReview
-                                orderby productReviews.Rating descending
-                                select productReviews).Take(5);
-            foreach (var list in recordedData)
-            {
-                Console.WriteLine("rating:" + list.Rating + " " + "ID: " + list.ProductId + " " + list.Review);
-                 
-            }
+            var result = (from product in productReview
+                          orderby product.Rating descending
+                          select product).Take(3);
+
+            return result.ToList();
         }
-        public List<ProductReview> RetrieveUnderCondition(List<ProductReview> productReview)
+
+
+        public List<ProductReview> GetRatedMoreThan3AndProductId1Or4Or9(List<ProductReview> product_Review)
         {
-            var condition = (from product in productReview
+            var result = (from product in product_Review
                           where product.Rating > 3 && (product.ProductId == 1 || product.ProductId == 4 || product.ProductId == 9)
                           select product).ToList();
 
-            return condition;
-        
+            return result;
         }
-        public void GetCountGroupProductId(List<ProductReview> productReview)
+
+
+
+        public void RetrieveCount(List<ProductReview> productReview)
         {
 
 
@@ -42,6 +43,22 @@ namespace Linq
             }
         }
 
-    } 
+
+        public void RetrieveproductIdAndReview(List<ProductReview> product_Review)
+        {
+            var result = product_Review.Select(x => new { productId = x.ProductId, review = x.Review });
+
+            foreach (var element in result)
+            {
+                Console.WriteLine(element.productId + " " + element.review);
+            }
+
+        }
+
+
+
+
+
+    }
 }
 
