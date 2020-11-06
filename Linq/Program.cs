@@ -27,10 +27,8 @@ namespace Linq
             };
             
             Management management = new Management();
-            // management.RetrieveproductIdAndReview(productReviewList);
-
-            List<ProductReview> skippedRecords = management.skipTopFiveRecords(productReviewList);
-            displayList(skippedRecords);
+            DataTableManagement dataTable = new DataTableManagement();
+            dataTable.displayDataTable();
         }
 
         public static void displayList(List<ProductReview> list)
