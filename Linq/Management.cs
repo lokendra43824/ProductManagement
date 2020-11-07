@@ -79,8 +79,22 @@ namespace Linq
             }
 
         }
+        // UC-10
+        public void ProductAvarageRating(List<ProductReview> productReviews)
+        {
+            var records = productReviews.GroupBy(x => x.ProductId).Select(x => new { ProductId = x.Key, Average = x.Average() });
 
+            Console.WriteLine("Liked Products are");
+
+            foreach (var list in records)
+            {
+                Console.WriteLine($"ProductId: {list.ProductId}, Count : {list.Average}");
+            }
+        }
 
     }
+
+
 }
+
 
