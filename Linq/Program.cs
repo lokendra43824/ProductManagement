@@ -27,8 +27,9 @@ namespace Linq
             };
             
             Management management = new Management();
-            DataTableManagement dataTable = new DataTableManagement();
-            dataTable.displayDataTable();
+            management.IsLikeProducts(productReviewList);
+            //DataTableManagement dataTable = new DataTableManagement();
+            // dataTable.displayDataTable();
         }
 
         public static void displayList(List<ProductReview> list)

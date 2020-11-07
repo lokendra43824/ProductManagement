@@ -6,6 +6,8 @@ namespace Linq
 {
     public class ProductReview
     {
+        internal bool IsLike;
+
         public int ProductId { get; set; }
         public int UserId { get; set; }
         public double Rating { get; set; }

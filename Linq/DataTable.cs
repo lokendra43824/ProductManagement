@@ -9,6 +9,7 @@ namespace Linq
     {
 
         public static DataTable table = new DataTable();
+      //uc-8
         public void addDataTable()
         {
             table.Columns.Add("productId");

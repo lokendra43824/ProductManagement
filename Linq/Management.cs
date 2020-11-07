@@ -8,7 +8,7 @@ namespace Linq
 {
     public class Management
     {
-
+        //uc-2
         public List<ProductReview> GetTopThreeRatedProducts(List<ProductReview> productReview)
         {
             var result = (from product in productReview
@@ -18,7 +18,7 @@ namespace Linq
             return result.ToList();
         }
 
-
+        // uc-3
         public List<ProductReview> GetRatedMoreThan3AndProductId1Or4Or9(List<ProductReview> product_Review)
         {
             var result = (from product in product_Review
@@ -29,7 +29,7 @@ namespace Linq
         }
 
 
-
+        //uc-4
         public void RetrieveCount(List<ProductReview> productReview)
         {
 
@@ -42,7 +42,7 @@ namespace Linq
                 Console.WriteLine("   " + x.productId + "\t\t    " + x.count);
             }
         }
-
+        // uc-5
 
         public void RetrieveproductIdAndReview(List<ProductReview> product_Review)
         {
@@ -54,15 +54,31 @@ namespace Linq
             }
 
         }
+
+        //uc-6
         public List<ProductReview> skipTopFiveRecords(List<ProductReview> product_Review)
         {
             var result = (from product in product_Review
                           select product).Skip(5);
             return result.ToList();
         }
+       
 
+               // UC 9
+        public void IsLikeProducts(List<ProductReview> productReviewsList)
+        {
+            var records = from product in productReviewsList
+                          where product.isLike == true
+                          select product;
 
+            Console.WriteLine("Liked Products are");
 
+            foreach (var list in records)
+            {
+                Console.WriteLine($"ProductId: {list.ProductId}, UserId : {list.UserId}, Rating: {list.Rating}, Review : {list.Review}, IsLike : {list.IsLike}");
+            }
+
+        }
 
 
     }
