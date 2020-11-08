@@ -91,6 +91,24 @@ namespace Linq
                 Console.WriteLine($"ProductId: {list.ProductId}, Count : {list.Average}");
             }
         }
+        //uc-11
+        public List<ProductReview> ReviewMessageNice(List<ProductReview> product_Review)
+        {
+            var result = from product in product_Review
+                         where product.Review == "Good"
+                         select product;
+            return result.ToList();
+        }
+        //uc-12
+        public List<ProductReview> OrderByRating(List<ProductReview> product_Review)
+        {
+            var result = from product in product_Review
+                         where product.UserId == 101
+                         orderby product.Rating descending
+                         select product;
+            return result.ToList();
+
+        }
 
     }
 
