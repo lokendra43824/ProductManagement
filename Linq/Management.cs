@@ -92,6 +92,15 @@ namespace Linq
             }
         }
 
+        //uc-11
+        
+        public List<ProductReview> ReviewMessageNice(List<ProductReview> product_Review)
+        {
+            var result = from product in product_Review
+                         where product.Review == "Good"
+                         select product;
+            return result.ToList();
+        }
     }
 
 
