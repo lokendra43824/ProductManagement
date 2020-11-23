@@ -62,9 +62,9 @@ namespace Linq
                           select product).Skip(5);
             return result.ToList();
         }
-       
 
-               // UC 9
+
+        // UC 9
         public void IsLikeProducts(List<ProductReview> productReviewsList)
         {
             var records = from product in productReviewsList
@@ -80,20 +80,22 @@ namespace Linq
 
         }
         // UC-10
-        public void ProductAvarageRating(List<ProductReview> productReviews)
+        public void AvgRatingGroupByProductId(List<ProductReview> product_Review)
         {
-            var records = productReviews.GroupBy(x => x.ProductId).Select(x => new { ProductId = x.Key, Average = x.Average() });
+            var result = product_Review.GroupBy(p => p.ProductId).
+                Select(p => new { productId = p.Key, Avg = p.Average(p => p.Rating) });
 
-            Console.WriteLine("Liked Products are");
 
-            foreach (var list in records)
+
+            foreach (var x in result)
             {
-                Console.WriteLine($"ProductId: {list.ProductId}, Count : {list.Average}");
+                Console.WriteLine("   " + x.productId + "\t\t    " + x.Avg);
             }
+
         }
 
         //uc-11
-        
+
         public List<ProductReview> ReviewMessageNice(List<ProductReview> product_Review)
         {
             var result = from product in product_Review
@@ -101,9 +103,9 @@ namespace Linq
                          select product;
             return result.ToList();
         }
+
+
     }
-
-
 }
 
 

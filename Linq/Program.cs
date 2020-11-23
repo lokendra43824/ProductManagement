@@ -27,10 +27,12 @@ namespace Linq
             };
             
             Management management = new Management();
-            management.ProductAvarageRating(productReviewList);
+            //management.ProductAvarageRating(productReviewList);
             // management.IsLikeProducts(productReviewList);
             //DataTableManagement dataTable = new DataTableManagement();
             // dataTable.displayDataTable();
+            List<ProductReview> RiviewMessageGood = management.ReviewMessageNice(productReviewList);
+            displayList(RiviewMessageGood);
         }
 
         public static void displayList(List<ProductReview> list)
