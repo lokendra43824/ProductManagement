@@ -27,7 +27,7 @@ namespace Linq
             };
             
             Management management = new Management();
-            management.ProductAvarageRating(productReviewList);
+            management.AvgRatingGroupByProductId(productReviewList);
             // management.IsLikeProducts(productReviewList);
             //DataTableManagement dataTable = new DataTableManagement();
             // dataTable.displayDataTable();
