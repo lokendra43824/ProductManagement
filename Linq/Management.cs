@@ -104,7 +104,6 @@ namespace Linq
             return result.ToList();
         }
 
-
     }
 }
 

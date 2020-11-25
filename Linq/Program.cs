@@ -25,13 +25,17 @@ namespace Linq
                  new ProductReview(){ProductId = 4, UserId = 2, Rating = 4, Review = "low", isLike = true },
                  new ProductReview(){ProductId = 5, UserId = 3, Rating = 4, Review = "flop", isLike = true },
             };
-            
+
+
             Management management = new Management();
-            //management.ProductAvarageRating(productReviewList);
-            // management.IsLikeProducts(productReviewList);
-            //DataTableManagement dataTable = new DataTableManagement();
-            // dataTable.displayDataTable();
+
+
+
+
+
+
             List<ProductReview> RiviewMessageGood = management.ReviewMessageNice(productReviewList);
+
             displayList(RiviewMessageGood);
         }
 
@@ -46,6 +50,5 @@ namespace Linq
     }
 
 
-
 }
-    
+
