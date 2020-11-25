@@ -62,21 +62,16 @@ namespace Linq
                           select product).Skip(5);
             return result.ToList();
         }
-       
 
-               // UC 9
-        public void IsLikeProducts(List<ProductReview> productReviewsList)
+
+        // UC 9
+        public List<ProductReview> LikedProducts(List<ProductReview> productReview)
         {
-            var records = from product in productReviewsList
+            var records = from product in productReview
                           where product.isLike == true
                           select product;
 
-            Console.WriteLine("Liked Products are");
-
-            foreach (var list in records)
-            {
-                Console.WriteLine($"ProductId: {list.ProductId}, UserId : {list.UserId}, Rating: {list.Rating}, Review : {list.Review}, IsLike : {list.IsLike}");
-            }
+            return records.ToList();
 
         }
 

@@ -27,9 +27,10 @@ namespace Linq
             };
             
             Management management = new Management();
-            management.IsLikeProducts(productReviewList);
+            List<ProductReview> likedProductList = management.LikedProducts(productReviewList);
             //DataTableManagement dataTable = new DataTableManagement();
             // dataTable.displayDataTable();
+            displayList(likedProductList);
         }
 
         public static void displayList(List<ProductReview> list)
@@ -39,7 +40,7 @@ namespace Linq
                 Console.WriteLine("productID : " + "  " + item.ProductId + " user Id: " + "  " + item.UserId + " Rating: " + "  " + item.Rating + " Review: " + "  " + item.Review + " IsLike: " + "  " + item.isLike);
             }
         }
-
+       
     }
 
 
