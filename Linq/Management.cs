@@ -8,7 +8,7 @@ namespace Linq
 {
     public class Management
     {
-        public readonly DataTable data = new DataTable();
+       
         public void TopThreeRecords(List<ProductReview> listProductReview)
         {
             var recordedData = (from productReviews in listProductReview
