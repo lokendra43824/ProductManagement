@@ -19,18 +19,20 @@ namespace Linq
                  new ProductReview(){ProductId = 3, UserId = 3, Rating = 3, Review = "average", isLike = true },
                  new ProductReview(){ProductId = 4, UserId = 4, Rating = 4, Review = "low", isLike = true },
                  new ProductReview(){ProductId = 5, UserId = 5, Rating = 1, Review = "flop", isLike = true },
-                  new ProductReview(){ProductId = 1, UserId = 3, Rating = 4, Review = "excellent", isLike = true },
+                  new ProductReview(){ProductId = 1, UserId = 1, Rating = 4, Review = "excellent", isLike = true },
                  new ProductReview(){ProductId = 2, UserId = 4, Rating = 1, Review = "low", isLike = true },
                  new ProductReview(){ProductId = 3, UserId = 5, Rating = 3, Review = "average", isLike = true },
-                 new ProductReview(){ProductId = 4, UserId = 2, Rating = 4, Review = "low", isLike = true },
+                 new ProductReview(){ProductId = 4, UserId = 1, Rating = 4, Review = "low", isLike = true },
                  new ProductReview(){ProductId = 5, UserId = 3, Rating = 4, Review = "flop", isLike = true },
             };
-            
+
+
             Management management = new Management();
-            management.AvgRatingGroupByProductId(productReviewList);
-            // management.IsLikeProducts(productReviewList);
-            //DataTableManagement dataTable = new DataTableManagement();
-            // dataTable.displayDataTable();
+
+            // List<ProductReview> RiviewMessageGood = management.ReviewMessageNice(productReviewList);
+            List<ProductReview> order =management.OrderByRating(productReviewList);
+            displayList(order);
+           
         }
 
         public static void displayList(List<ProductReview> list)
@@ -44,6 +46,5 @@ namespace Linq
     }
 
 
-
 }
-    
+

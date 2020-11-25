@@ -105,7 +105,7 @@ namespace Linq
         public List<ProductReview> OrderByRating(List<ProductReview> product_Review)
         {
             var result = from product in product_Review
-                         where product.UserId == 101
+                         where product.UserId == 1
                          orderby product.Rating descending
                          select product;
             return result.ToList();
